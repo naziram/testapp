@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <center>
+        <meta charset="UTF-8">
+        <h1>Al Quran - List of Surahs</h1>
+
+    <style>
+    #div1
+    {
+        height:30px;
+        width:800px:
+        padding:15px;
+        margin:10px;
+        background-color:grey;
+    }
+
+    #table1
+    {
+       text-align:center;
+       font-family:Arial;
+       font-size:14px;
+       width:800px;
+       color:white;
+       cell-spacing:0px;
+       cell-padding:0px:
+    }
+
+    #div2
+    {
+        height:100px;
+        width:800px;
+        overflow:auto;
+        overflow-x=hidden;
+    }
+
+    #table2
+    {
+       text-align:center;
+       font-family:Arial;
+       font-size:13px;
+       width:800px;
+       color:black;
+       cell-spacing:0px;
+       cell-padding:10px:
+       height:100%
+
+    }
+
+    </style>
+
+
+    </head>
+    <body>
+
+    <div id="div1">
+    <table id="table1">
+    <tr>
+        <th>ID</th>
+        <th>Arabic Name</th>
+        <th>in English</th>
+        <th>Name</th>
+        <th>Number of Ayahs</th>
+        <th>Revelation type</th>
+
+    </tr>
+    </table>
+    </div>
+
+    <div id="div2">
+    <table id="table2">
+    <tr>
+        <td>{{surah.id}}</td>
+        <td>{{surah.arabicName}}</td>
+        <td>{{surah.inEnglish}}</td>
+        <td>{{surah.name}}</td>
+        <td>{{surah.numberOfAyahs}}</td>
+        <td>{{surah.revelationType}}</td>
+
+    </tr>
+    </table>
+    </div>
+
+    </body>
+    </center>
+    </html>

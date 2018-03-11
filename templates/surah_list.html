@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h2>List of Surahs :</h2>
+
+    <style>
+
+    #scr1
+    {
+       overflow:auto;
+       overflow-x=hidden;
+    }
+
+    </style>
+
+
+    <div id="scr1">
+        <table class="table table-striped table-bordered table-hover table-fixed">
+            <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Arabic Name</th>
+                  <th>in English</th>
+                  <th>Name</th>
+                  <th>Number of Ayahs</th>
+                  <th>Revelation type</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                {% for surah in surahs %}
+                <tr>
+                    <td>{{surah.id}}</td>
+                    <td>{{surah.arabicName}}</td>
+                    <td>{{surah.inEnglish}}</td>
+                    <td>{{surah.name}}</td>
+                    <td>{{surah.numberOfAyahs}}</td>
+                    <td>{{surah.revelationType}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
