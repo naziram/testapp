@@ -1,8 +1,8 @@
 .DS_Store
 .idea
-/venv
+venv/
 *.pyc
-__pychache__
+__pychache__/
 data.py
 loadsurahlist.py
 surahs114.csv
