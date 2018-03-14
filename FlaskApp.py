@@ -127,7 +127,7 @@ def logout():
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
-# Dashboard
+# Dashboard for Articles
 @app.route('/dashboard')
 @is_logged_in
 def dashboard():
