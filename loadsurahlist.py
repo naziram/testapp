@@ -1,3 +1,4 @@
+# python file to load json data into mySql
 import csv
 import MySQLdb
 
