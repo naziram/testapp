@@ -1,18 +1,23 @@
+import os
 from flask import Flask, render_template, flash, redirect, url_for, session, request, logging
 #from data import Articles
 from flask_mysqldb import MySQL
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from functools import wraps
+import hifzconfig
 
 app = Flask(__name__)
+app.debug = hifzconfig.DEBUG
+app.secret_key = hifzconfig.SECRET_KEY
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1373naam'
-app.config['MYSQL_DB'] = 'hifztracker'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['MYSQL_HOST'] = hifzconfig.MYSQL_HOST
+app.config['MYSQL_USER'] = hifzconfig.MYSQL_USER
+app.config['MYSQL_PASSWORD'] = hifzconfig.MYSQL_PASSWORD
+app.config['MYSQL_DB'] = hifzconfig.MYSQL_DB
+app.config['MYSQL_CURSORCLASS'] = hifzconfig.MYSQL_CURSORCLASS
+
 # init MYSQL
 mysql = MySQL(app)
 
@@ -300,5 +305,4 @@ def delete_article(id):
     return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
-    app.secret_key='secret123'
-    app.run(debug=True)
+    app.run()
